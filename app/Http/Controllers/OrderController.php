@@ -12,8 +12,7 @@ class OrderController extends Controller
         $order = Order::query();
 
         if(request('keyword')){
-            $order = $order->where('id',request('keyword'))
-                  ->orWhere('code', 'like', '%'.request('keyword').'%')
+            $order = $order->orWhere('code', 'like', '%'.request('keyword').'%')
                   ->orWhere('type', 'like', '%'.request('keyword').'%')
                   ->when(strtolower(request('keyword')) == 'pending', function ($query, $role) {
                         $query->orWhere('status_id', 1);
@@ -25,10 +24,10 @@ class OrderController extends Controller
                         $query->orWhere('status_id', 3);
                     })
                   ->orWhereHas('user', function($query) {
-                    $query->where('fullname', 'like', '%'.request('keyword').'%');
+                    $query->where('fullname', 'ilike', '%'.request('keyword').'%');
                   })
                   ->orWhereHas('merk', function($query) {
-                    $query->where('name', 'like', '%'.request('keyword').'%');
+                    $query->where('name', 'ilike', '%'.request('keyword').'%');
                   });
         }
 

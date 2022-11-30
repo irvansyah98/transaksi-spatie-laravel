@@ -26,7 +26,7 @@
                   <div class="box-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Nama Lengkap</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama Lengkap" name="name" required>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama Lengkap" name="fullname" required>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail1">No Telepon</label>

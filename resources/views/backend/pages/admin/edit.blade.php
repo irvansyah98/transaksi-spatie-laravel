@@ -28,7 +28,7 @@
                   <div class="box-body">
                     <div class="form-group">
                       <label for="">Nama Lengkap</label>
-                      <input type="text" class="form-control" id="" placeholder="Nama Lengkap" name="name" value="{{ $data->name }}" required>
+                      <input type="text" class="form-control" id="" placeholder="Nama Lengkap" name="fullname" value="{{ $data->fullname }}" required>
                     </div>
                     <div class="form-group">
                       <label for="">No Telepon</label>
