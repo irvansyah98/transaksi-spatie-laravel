@@ -22,3 +22,5 @@ DB_PASSWORD=123456``
 * user admin
 <br>email : admin@gmail.com
 <br>pass : 123456
+<br><br>
+Link repository https://github.com/irvansyah98/transaksi-spatie-laravel.git
