@@ -57,6 +57,7 @@ class GuestController extends Controller
         }
 
         $result = User::create($req);
+        $result->assignRole('guest');
 
         return redirect('backend/guest')->withInput()->with('message', array(
           'title' => 'Yay!',

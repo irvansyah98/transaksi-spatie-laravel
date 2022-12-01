@@ -28,6 +28,8 @@ class AdminController extends Controller
 
         $result = User::create($req);
 
+        $result->assignRole('admin');
+
         return redirect('backend/admin')->withInput()->with('message', array(
           'title' => 'Yay!',
           'type' => 'success',
